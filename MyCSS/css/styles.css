@@ -1,0 +1,64 @@
+ul {
+  list-style-type: circle;
+  list-style-image: url(../img/icon.png);
+  list-style-position: inside;
+}
+ol {
+  list-style-type: lower-alpha;
+  list-style-type: none;
+}
+
+/* p {
+  line-height: 5;
+  background-color: pink;
+}
+
+img {
+  vertical-align: middle;
+} */
+
+/* main {
+  font-size: 32px;
+  line-height: 2em;
+  line-height: 2;
+}
+
+section {
+  font-size: 16px;
+} */
+
+/* p {
+  font-size: 16px;
+  line-height: 48px;
+  background-color: salmon;
+} */
+
+/* @charset "utf-8";
+
+h1{
+  font-family: Verdana, 'Arial black', メイリオ, sans-serif;
+} */
+
+/* h1 {
+  color: red;
+  font-size: 48px;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+p {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+} */
+
+/* body {
+  color: skyblue;
+  border: 1px solid red;
+}
+h1 {
+  border: inherit;
+} */
