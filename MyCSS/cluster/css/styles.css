@@ -1,0 +1,27 @@
+/* h1 {
+  color: skyblue;
+} */
+/* .info {
+  color: red;
+}
+.title {
+  font-weight: normal;
+} */
+/* #title {
+  color: aqua;
+}
+* {
+  font-size: 12px;
+} */
+[target] {
+  font-weight: bold;
+}
+[href="#top"] {
+  font-weight: bold;
+}
+[href^="https"] {
+  font-weight: bold;
+}
+[href$="dotinstall"] {
+  font-weight: bold;
+}
