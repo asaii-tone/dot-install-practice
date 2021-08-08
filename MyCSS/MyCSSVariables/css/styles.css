@@ -1,0 +1,18 @@
+:root {
+  --my-color: orange;
+  
+}
+
+/* body{
+  --my-color: orange;
+} */
+
+h1 {
+  /* --my-color: orange; */
+  color: var(--my-color);
+  border-bottom: 3px solid var(--my-color);
+}
+
+p {
+  color: var(--my-color);
+}
