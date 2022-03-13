@@ -1,18 +1,26 @@
 <?php
 
-$today = date('Y-m-d H:i:s l');
+require('../app/functions.php');
+
+include('../app/_parts/_header.php');
+
+$names = [
+  'taro',
+  'jiro',
+  'saburo',
+];
 
 ?>
+  <ul>
+    <?php if (empty($names)): ?>
+      <li>Nobody!</li>
+    <?php else: ?>
+      <?php foreach ($names as $name): ?>
+        <li>Hello, <?= h($name); ?>!</li>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </ul>
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>PHP Practice</title>
-</head>
-<body>
-  <p>Hello, PHP!</p>
-  <p>Today: <?php echo date('Y-m-d H:i:s l'); ?></p>
-  <p>Today: <?= $today; ?></p>
-</body>
-</html>
+<?php 
+
+include('../app/_parts/_footer.php');
