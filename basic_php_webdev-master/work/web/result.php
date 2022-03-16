@@ -13,9 +13,8 @@
   // $color = isset($color) ? $color : 'None selected';
   // $color = $color ?? 'None selected';
   $colorFromGet = filter_input(INPUT_GET, 'color') ?? 'transparent';
-  setcookie('color', $colorFromGet);
-
-
+  $_SESSION['color'] = $colorFromGet;
+  
   include('../app/_parts/_header.php');
 
 ?>
