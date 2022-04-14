@@ -8,7 +8,15 @@ $pdo = getPdoInstance();
 $todos = getTodos($pdo);
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   validateToken();
-  addTodo($pdo);
+  $action = filter_input(INPUT_GET, 'action');
+  switch ($action) {
+    case 'add':
+      addTodo($pdo);
+      break;
+    case 'toggle':
+      toggleTodo($pdo);
+      break;
+  }
   header('Location:' . SITE_URL);
   exit;
 }
@@ -25,14 +33,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <body>
   <h1>Todos</h1>
 
-  <form action="" method="post">
+  <form action="?action=add" method="post">
     <input type="text" name="title"  placeholder="add new text .">
     <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
   </form>
   <ul>
     <?php foreach($todos as $todo): ?>
       <li>
-        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+        <form action="?action=toggle" method="post">
+          <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+          <input type="hidden" name="id" value="<?= h($todo->id) ?>">
+          <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
+        </form>
         <span class="<?= $todo->is_done ? 'done' : ''; ?>"><?=h($todo->title); ?></span>
       </li>
     <?php endforeach; ?>   
@@ -45,5 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
       <span>Title</span>
     </li> -->
   </ul>
+  <script src="js/main.js"></script>
 </body>
 </html>
