@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -6,6 +10,7 @@ ul {
 
 li {
   display: flex;
+  margin-bottom: 8px;
 }
 
 .done {
@@ -16,4 +21,31 @@ li {
 .delete {
   color: #ccc;
   cursor: pointer;
+}
+
+.delete-form {
+  margin-left: auto;
+  padding-left: 8px;
+}
+
+main {
+  width: 320px;
+  margin: 32px auto;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
 }
