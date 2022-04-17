@@ -1,5 +1,7 @@
 <?php
 
+namespace MyApp;
+
 class Token {
   public static function create(){
     if (!isset($_SESSION['token'])) {
