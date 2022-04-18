@@ -13,7 +13,7 @@ li {
   margin-bottom: 8px;
 }
 
-.done {
+input[type="checkbox"]:checked + span {
   text-decoration: line-through;
   color: #ccc;
 }

@@ -12,9 +12,6 @@
           token: checkbox.dataset.token,
         }),
       });
-      // データベースが更新されると打ち消し線をつけて、画面も更新されたように見せる。
-      // 非同期処理
-      checkbox.nextElementSibling.classList.toggle('done');
     });
   });
 
