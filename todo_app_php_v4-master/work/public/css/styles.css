@@ -18,9 +18,10 @@ li {
   color: #ccc;
 }
 
-.delete {
+.delete, .purge {
   color: #ccc;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .delete-form {
@@ -48,4 +49,9 @@ input[type="text"] {
 
 input[type="checkbox"] {
   margin-right: 8px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
 }
